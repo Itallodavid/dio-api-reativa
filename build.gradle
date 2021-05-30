@@ -12,6 +12,10 @@ repositories {
 	mavenCentral()
 }
 
+test {
+	useJUnitPlatform()
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -25,6 +29,10 @@ dependencies {
 
 	// Spring DOC Webflux
 	implementation "org.springdoc:springdoc-openapi-webflux-ui:1.5.9"
+
+	// JUnit
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 }
 
 test {
